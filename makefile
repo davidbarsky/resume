@@ -1,8 +1,8 @@
-output.pdf : template.tex
-	xelatex template.tex
-	rm template.out
-	rm template.aux
-	rm template.log
+output.pdf : resume.tex
+	xelatex resume.tex
+	rm resume.out
+	rm resume.aux
+	rm resume.log
 
 clean :
 	rm output.pdf
