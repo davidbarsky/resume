@@ -1,0 +1,126 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, a4paper]{article}
+
+% LAYOUT
+%--------------------------------
+% Margins
+\usepackage{geometry}
+\geometry{letterpaper, left=40mm, right=40mm, top=30mm, bottom=20mm}
+
+% Do not indent paragraphs
+\setlength\parindent{0in}
+
+% TYPOGRAPHY
+%--------------------------------
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+% converts LaTeX specials (quotes, dashes etc.) to Unicode
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont [Ligatures={Common}]{Minion Pro}
+% Cool ampersand
+\newcommand{\amper}{{\fontspec[Scale=.95]{Minion Pro}\selectfont\itshape\&}}
+\raggedright
+
+% MARGIN NOTES
+%--------------------------------
+\usepackage{marginnote}
+\newcommand{\note}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{20pt}
+\reversemarginpar
+\pagenumbering{gobble}
+
+% HEADINGS
+%--------------------------------
+\usepackage{sectsty}
+\usepackage[normalem]{ulem}
+\sectionfont{\rmfamily\mdseries}
+\subsectionfont{\rmfamily\mdseries\scshape\normalsize}
+\subsubsectionfont{\rmfamily\bfseries\upshape\normalsize}
+
+% PDF SETUP
+%--------------------------------
+\usepackage{hyperref}
+\hypersetup
+{
+  pdfauthor={David Barsky},
+  pdfsubject={David Barsky's Resume},
+  pdftitle={David Barsky's Resume},
+  colorlinks, breaklinks, xetex, bookmarks,
+  filecolor=black,
+  urlcolor=[rgb]{0.117,0.682,0.858},
+  linkcolor=[rgb]{0.117,0.682,0.858},
+  linkcolor=[rgb]{0.117,0.682,0.858},
+  citecolor=[rgb]{0.117,0.682,0.858}
+}
+
+% LIST ENVIRONMENT
+%--------------------------------
+\usepackage{paralist}
+\setdefaultleftmargin{.5cm}{2cm}{}{}{}{}
+\renewenvironment{itemize}[1]{\begin{compactitem}#1}{\end{compactitem}}
+
+% DOCUMENT
+%--------------------------------
+\begin{document}
+
+{\LARGE $name$}\\[.2cm]
+
+% \vspace{-10pt}
+
+\href{mailto:$email$}{$email$}
+
+$for(urls)$
+\href{http://$urls$}{$urls$}\\
+$endfor$
+
+\section*{Education}
+\note{2013--2016}\textbf{Brandeis University}\\
+Computer Science, B.S.
+
+\section*{Work Experience}
+
+\note{Summer 2015}
+\textbf{Localytics} \\
+\emph{Software Engineering Intern}
+\begin{itemize}
+    \item Lead development of an iOS port of the web dashboard using Swift and functional reactive programming techniques
+    \item Contributed to the Scala-based event processor
+\end{itemize}
+
+\note{2010--2012}
+\textbf{Sloan Kettering} \\
+\emph{Research Intern}
+\begin{itemize}
+    \item Studied nuclear pore gene expression in the mouse embryo using bioinformatic tools
+    \item Received award from the Intel Science Talent Search recognizing outstanding research
+\end{itemize}
+
+\section*{Selected Open Source Projects}
+
+\note{Spring 2015}
+\textbf{Gadabout}
+\begin{itemize}
+    \item Developed social iOS application that allowed users to find free time with friends
+    \item Written using Objective-C, Sinatra
+\end{itemize}
+
+\note{Spring 2015}
+\textbf{Surveyor}
+\begin{itemize}
+    \item Designed and developed a surveying/marketing tool aimed at college students
+    \item Written using Ruby on Rails
+
+\end{itemize}
+
+\section*{Technical Skills}
+Swift, Objective-C, Java, Scala, Go, Ruby on Rails, Lisp, Git, PostgreSQL
+
+\section*{Classwork at Brandeis}
+\textbf{Current:} Database Management Systems, Operating Systems, Discrete Structures \\
+\textbf{Past:} Structure and Interpretation of Computer Programs, Big Data Analysis (Hadoop, Mahout), Data Structures and Algorithms
+
+\end{document}
