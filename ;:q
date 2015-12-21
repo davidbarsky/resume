@@ -119,11 +119,11 @@ Completed additional coursework in Economics.
 \end{itemize}
 
 \section*{Technical Skills}
-\textbf{Languages:} Swift, Objective-C, Java, JavaScript (ES6), Go, Ruby\\
-\textbf{Tooling:} UIKit, Express, Mocha, PostgreSQL, Ruby on Rails, \LaTeX
+\textbf{Languages:} Swift, Objective-C, Java, JavaScript (ES6), Go \\
+\textbf{Tooling:} UIKit, Express, Mocha, PostgresSQL, \LaTeX
 
 \section*{Classwork}
-\textbf{Current:} Distributed Systems, Theory of Computation\\
+\textbf{Current:} Distributed Systems, Theory of Computation \\
 \textbf{Past:} Database Management Systems, Operating Systems, Structure and Interpretation of Computer Programs, Data Structures and Algorithms
 
 \end{document}
