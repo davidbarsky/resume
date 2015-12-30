@@ -1,6 +1,6 @@
 # My Resume
 
-My resume, built using Mattia Tezzele’s incredibly handy [cv-boilerplate](https://github.com/mrzool/cv-boilerplate).
+My resume built using a heavily modified version of Mattia Tezzele's [cv-boilerplate](https://github.com/mrzool/cv-boilerplate).
 
 To build, install MacTex and run `make` inside the directory.
 
