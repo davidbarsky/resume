@@ -1,8 +1,6 @@
 output.pdf : resume.tex
 	xelatex resume.tex
-	rm resume.out
-	rm resume.aux
-	rm resume.log
-
+	open resume.pdf
+    
 clean :
 	rm output.pdf
