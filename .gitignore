@@ -2,3 +2,6 @@
 *.aux
 *.log
 *.out
+.vscode
+resume.fdb_latexmk
+resume.fls
