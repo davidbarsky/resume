@@ -19,9 +19,9 @@
 \usepackage{xltxtra}
 % converts LaTeX specials (quotes, dashes etc.) to Unicode
 \defaultfontfeatures{Mapping=tex-text}
-\setromanfont [Ligatures={Common}]{Minion Pro}
+\setromanfont [Ligatures={Common}]{SF UI Text}
 % Cool ampersand
-\newcommand{\amper}{{\fontspec[Scale=.95]{Minion Pro}\selectfont\itshape\&}}
+\newcommand{\amper}{{\fontspec[Scale=.95]{SF UI Text}\selectfont\itshape\&}}
 \raggedright
 
 % MARGIN NOTES
@@ -84,43 +84,36 @@ Completed additional coursework in History and Politics
 \section*{Work Experience}
 
 \note{Fall 2017–Present}
-\textbf{Amazon} \\
+\textbf{Amazon, Alexa AI} \\
 \emph{Software Engineer}
 \begin{itemize}
-    \item Worked on internal machine learning tooling for Alexa NLU.
-    \item Implemented GDPR-compliant retention policies on two petabytes of user-derived test and training data.
-    \item Moved dependencies across Alexa NLU onto maintained artifact repository, allowing engineers to move off deprecated packages.
-    \item Migrated tooling and services to rely on a secure compute platform that reduced model build and test execution time by 50\%.
+    \item Designed and implemented a test data generation service, reducing p50 runtime from 3 hours to 35 minutes.
+	\item Designed and mentored intern in implementing a Docker-based, horizontally-scalable test data generation system. This system reduced cold-start times from 10 minutes to 40 seconds.
+    \item Implemented GDPR-compliant retention policies on 2 petabytes of user-derived test and training data.
+	\item Implemented Alexa's natural language model to be device-capability aware. This reduced the engineering effort needed to support new hardware and cut the public Alexa service's memory usage by 80\%.
 \end{itemize}
 
 \note{Summer 2016}
-\textbf{Amazon Web Services} \\
+\textbf{Amazon, AWS Payments} \\
 \emph{Software Engineer (Intern)}
 \begin{itemize}
+	\item Worked in Payments organization in Amazon Web Services.
     \item Architected and developed a distributed, fault-tolerant service for financial data auditing that simplified payments infrastructure and reduced on-call burden.
 \end{itemize}
 
-\note{Summer 2015}
-\textbf{Localytics} \\
-\emph{Software Engineer (Intern)}
-\begin{itemize}
-    \item Developed an internal iOS alpha of the core dashboard product using functional reactive programming techniques.
-\end{itemize}
+% \note{Summer 2015}
+% \textbf{Localytics} \\
+% \emph{Software Engineer (Intern)}
+% \begin{itemize}
+%     \item Developed an internal iOS alpha of the core dashboard product using functional reactive programming techniques.
+% \end{itemize}
 
 \section*{Selected Projects}
-
-% \note{Winter 2017}
-
-% \textbf{Boston Rust Meetup at Amazon}
-% \begin{itemize}
-%     \item Maneuvered corporate bureaucracy to host a Rust meetup at Amazon.
-%     \item Spoke about integrating Rust into proprietary build systems.
-% \end{itemize}
 
 \note{Spring 2018}
 \textbf{rustfmt} (\href{https://github.com/rust-lang-nursery/rustfmt}{github.com/rust-lang-nursery/rustfmt})
 \begin{itemize}
-    \item Implemented functionality for checking correctness of formatting in continuous integration-like enviroments.
+    \item Implemented functionality for checking correctness of formatting in continuous integration-like environments.
 \end{itemize}
 
 \note{Winter 2018}
@@ -132,13 +125,12 @@ Completed additional coursework in History and Politics
 \note{Fall 2016–Spring 2017}
 \textbf{Honor's Thesis} (\href{https://github.com/davidbarsky/sirens}{github.com/davidbarsky/sirens})
 \begin{itemize}
-    \item Studying efficient task scheduling using probabilistic techniques. Made extensive use of Scala's functional features to ensure correctness.
+    \item Benchmarked job scheduling algorithms 
 \end{itemize}
 
-\section*{Skills and Interests}
-\textbf{Interests:} Distributed systems, functional programming, service observability \\
-\textbf{Languages:} Rust, Python, Go, Java, Scala, SQL \\
-\textbf{Tooling:} Amazon Web Services, Unix systems, Docker, Git, RESTful APIs, \LaTeX
+\section*{Skills}
+\textbf{Languages:} Go, Rust, Java, Python \\
+\textbf{Tooling:} Amazon Web Services, Unix, Docker, Git, gRPC.
 
 % \section*{Academics}
 
