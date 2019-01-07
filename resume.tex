@@ -1,7 +1,7 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
 
-\documentclass[11pt, a4paper]{article}
+\documentclass[10pt, a4paper]{article}
 
 % LAYOUT
 %--------------------------------
@@ -30,7 +30,7 @@
 \newcommand{\note}[1]{\marginnote{\scriptsize #1}}
 \renewcommand*{\raggedleftmarginnote}{}
 \setlength{\marginparsep}{14pt}
-\setlength{\marginparwidth}{66pt}
+\setlength{\marginparwidth}{70pt}
 \reversemarginpar
 \pagenumbering{gobble}
 
@@ -76,21 +76,15 @@
 \href{http://github.com/davidbarsky}{github.com/davidbarsky}\\
 \href{http://linkedin.com/in/davidbarsky}{linkedin.com/in/davidbarsky}
 
-\section*{Education}
-\note{Fall 2013—2017}\textbf{Brandeis University}\\
-Computer Science, B.A. with Honors. \\
-Completed additional coursework in History and Politics
-
 \section*{Work Experience}
 
 \note{Fall 2017–Present}
 \textbf{Amazon, Alexa AI} \\
 \emph{Software Engineer}
 \begin{itemize}
-    \item Designed and implemented a test data generation service used by teams across Alexa, reducing p50 runtime from 3 hours to 35 minutes.
-	\item Designed and mentored intern in implementing a Docker-based, horizontally-scalable test data generation system. This system reduced p50 cold-start times from 9 minutes to 20 seconds.
-    \item Implemented GDPR-compliant retention policies on 2 petabytes of user-derived test and training data.
-	\item Implemented Alexa's natural language model to be device-capability aware. This reduced the engineering effort needed to support new hardware and cut the public Alexa service's memory usage by 80\%.
+    \item Launched the AWS Lambda Runtime for Rust.
+	\item Designed and implemented a test data generation service used across Alexa. This new system is horizontally scalable and is 7x faster over the prior system.
+    \item Implemented Alexaʼs natural language model to be hardware-capability aware. This significantly reduced engineering effort needed to support new devices and cut the public Alexa serviceʼs memory usage by 30\%. 
 \end{itemize}
 
 \note{Summer 2016}
@@ -101,40 +95,39 @@ Completed additional coursework in History and Politics
     \item Architected and developed a distributed, fault-tolerant service for financial data auditing that simplified payments infrastructure and reduced on-call burden.
 \end{itemize}
 
-% \note{Summer 2015}
-% \textbf{Localytics} \\
-% \emph{Software Engineer (Intern)}
-% \begin{itemize}
-%     \item Developed an internal iOS alpha of the core dashboard product using functional reactive programming techniques.
-% \end{itemize}
+\note{Summer 2015}
+\textbf{Localytics} \\
+\emph{Software Engineer (Intern)}
+\begin{itemize}
+	\item Developed an internal iOS alpha of the core dashboard product using functional reactive programming techniques.
+\end{itemize}
+
+\section*{Education}
+\note{Fall 2013—2017}\textbf{Brandeis University}\\
+Computer Science, B.A. with Honors. \\
+Completed additional coursework in History and Politics
 
 \section*{Selected Projects}
 
-\note{Spring 2018}
-\textbf{rustfmt} (\href{https://github.com/rust-lang-nursery/rustfmt}{github.com/rust-lang-nursery/rustfmt})
+
+\textbf{Rust Runtime for AWS Lambda} (\href{https://github.com/awslabs/aws-lambda-rust-runtime}{github.com/awslabs/aws-lambda-rust-runtime})
 \begin{itemize}
-    \item Implemented functionality for checking correctness of formatting in continuous integration-like environments.
+    \item Launched and maintained the Rust Runtime for AWS Lambda.
 \end{itemize}
 
-\note{Winter 2018}
-\textbf{fs-sync} (\href{https://github.com/davidbarsky/fs-sync}{github.com/davidbarsky/fs-sync})
+\textbf{Tokio} (\href{https://github.com/tokio-rs/tokio}{github.com/tokio-rs/tokio})
 \begin{itemize}
-    \item Designed and implemented an intelligent rsync clone in Rust.
+    \item Co-maintainer of Tokio, Rust's asynchronous runtime.
+    \item Helped launch Tokio Trace, a unified instrumentation system that emits structured information containing temporality and causality.
 \end{itemize}
 
-\note{Fall 2016–Spring 2017}
 \textbf{Honor's Thesis} (\href{https://github.com/davidbarsky/sirens}{github.com/davidbarsky/sirens})
 \begin{itemize}
     \item Benchmarked job scheduling algorithms across various simulated workloads.
 \end{itemize}
 
 \section*{Skills}
-\textbf{Languages:} Go, Rust, Java, Python \\
-\textbf{Tooling:} Amazon Web Services, Unix, Docker, Git, gRPC
-
-% \section*{Academics}
-
-% \textbf{Classwork:} Database Management Systems, Operating Systems, Structure and Interpretation of Computer Programs, Data Structures and Algorithms \\
-% \textbf{Activities:} Parliamentary Debate, Rock Climbing, Rowing
+\textbf{Languages:} Rust, Go, Python, Java \\
+\textbf{Tooling:} AWS (DynamoDB, ECS, Lambda), Unix-like systems, Docker, Git, gRPC
 
 \end{document}
