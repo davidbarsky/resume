@@ -19,9 +19,12 @@
 \usepackage{xltxtra}
 % converts LaTeX specials (quotes, dashes etc.) to Unicode
 \defaultfontfeatures{Mapping=tex-text}
-\setromanfont [Ligatures={Common}]{SF UI Text}
+\setromanfont [Ligatures={Common}]{Inter UI}
 % Cool ampersand
-\newcommand{\amper}{{\fontspec[Scale=.95]{SF UI Text}\selectfont\itshape\&}}
+\newcommand{\amper}{{\fontspec[Scale=.95]{Inter UI}\selectfont\itshape\&}}
+\setmainfont[
+    BoldFont = * Semi Bold,
+]{Inter UI}
 \raggedright
 
 % MARGIN NOTES
@@ -69,14 +72,14 @@
 %--------------------------------
 \begin{document}
 
-{\LARGE David Barsky}\\[.2cm]
+{\LARGE\textbf{David Barsky}}\\[.2cm]
 
 \href{mailto:me@davidbarsky.com}{me@davidbarsky.com}\\
 \href{http://davidbarsky.com}{davidbarsky.com}\\
 \href{http://github.com/davidbarsky}{github.com/davidbarsky}\\
 \href{http://linkedin.com/in/davidbarsky}{linkedin.com/in/davidbarsky}
 
-\section*{Work Experience}
+\section*{\textbf{Work Experience}}
 
 \note{Fall 2017–Present}
 \textbf{Amazon, Alexa AI} \\
@@ -102,17 +105,17 @@
 	\item Developed an internal iOS alpha of the core dashboard product using functional reactive programming techniques.
 \end{itemize}
 
-\section*{Education}
+\section*{\textbf{Education}}
 \note{Fall 2013—2017}\textbf{Brandeis University}\\
 Computer Science, B.A. with Honors. \\
 Completed additional coursework in History and Politics
 
-\section*{Selected Projects}
+\section*{\textbf{Selected Projects}}
 
 
 \textbf{Rust Runtime for AWS Lambda} (\href{https://github.com/awslabs/aws-lambda-rust-runtime}{github.com/awslabs/aws-lambda-rust-runtime})
 \begin{itemize}
-    \item Launched and maintained the Rust Runtime for AWS Lambda.
+    \item Launched and maintaining the Rust Runtime for AWS Lambda.
 \end{itemize}
 
 \textbf{Tokio} (\href{https://github.com/tokio-rs/tokio}{github.com/tokio-rs/tokio})
@@ -126,7 +129,7 @@ Completed additional coursework in History and Politics
     \item Benchmarked job scheduling algorithms across various simulated workloads.
 \end{itemize}
 
-\section*{Skills}
+\section*{\textbf{Skills}}
 \textbf{Languages:} Rust, Go, Python, Java \\
 \textbf{Tooling:} AWS (DynamoDB, ECS, Lambda), Unix-like systems, Docker, Git, gRPC
 
