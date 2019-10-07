@@ -7,7 +7,7 @@
 %--------------------------------
 % Margins
 \usepackage{geometry}
-\geometry{letterpaper, left=40mm, right=40mm, top=16mm, bottom=16mm}
+\geometry{letterpaper, left=40mm, right=36mm, top=10mm, bottom=10mm}
 
 % Do not indent paragraphs
 \setlength\parindent{0in}
@@ -21,7 +21,7 @@
 \defaultfontfeatures{Mapping=tex-text}
 \setromanfont [Ligatures={Common}]{Inter UI}
 % Cool ampersand
-\newcommand{\amper}{{\fontspec[Scale=.95]{Inter UI}\selectfont\itshape\&}}
+\newcommand{\amper}{{\fontspec[Scale=.80]{Inter UI}\selectfont\itshape\&}}
 \setmainfont[
     BoldFont = * Semi Bold,
 ]{Inter UI}
@@ -32,7 +32,7 @@
 \usepackage{marginnote}
 \newcommand{\note}[1]{\marginnote{\scriptsize #1}}
 \renewcommand*{\raggedleftmarginnote}{}
-\setlength{\marginparsep}{14pt}
+\setlength{\marginparsep}{10pt}
 \setlength{\marginparwidth}{70pt}
 \reversemarginpar
 \pagenumbering{gobble}
@@ -65,14 +65,14 @@
 % LIST ENVIRONMENT
 %--------------------------------
 \usepackage{paralist}
-\setdefaultleftmargin{.5cm}{2cm}{}{}{}{}
+\setdefaultleftmargin{.5cm}{1cm}{}{}{}{}
 \renewenvironment{itemize}[1]{\begin{compactitem}#1}{\end{compactitem}}
 
 % DOCUMENT
 %--------------------------------
 \begin{document}
 
-{\LARGE\textbf{David Barsky}}\\[.2cm]
+{\LARGE\textbf{David Barsky}}\\[.1cm]
 
 \href{mailto:me@davidbarsky.com}{me@davidbarsky.com}\\
 \href{http://davidbarsky.com}{davidbarsky.com}\\
@@ -85,11 +85,12 @@
 \textbf{Amazon, Alexa AI} \\
 \emph{Software Engineer}
 \begin{itemize}
-	\item Integrated test data generation system into unified first/third party natural language model building/testing platform, removing distinction between and first and third-party skill development.
-	\item Sped up test data validation tooling used by customers 22x, reducing runtime from 45 minutes to 2 minutes.
-	\item Maintaining Rust-specific integration to Amazon-internal build/deployment systems.
-    \item Launched the AWS Lambda Runtime for Rust.
-	\item Designed and implemented a test data generation service used across Alexa. This new system is horizontally scalable and is 7x faster over the prior system.
+	\item Integrated internal test data generation system into the Alexa Skills Kit, a unified, self-service Alexa model building and testing platform.
+	\item Enabled multiple Alexa verticals (e.g., Music, Shopping) to release features independently and concurrently, doubling daily release capacity.
+	\item Drove AWS to sponsor the Rust project's AWS bill for the next three years.
+	\item Reduced execution time of NLU model validation tooling from 45 minutes to 2 minutes.
+	\item Reduced execution time of a test-data generation system from 12 hours to 15 minutes.
+	\item Mentored three interns, who have all returned to Amazon as full-time SDEs.
     \item Implemented Alexaʼs natural language model to be hardware-capability aware. This significantly reduced engineering effort needed to support new devices and cut the public Alexa serviceʼs memory usage by 30\%. 
 \end{itemize}
 
@@ -108,25 +109,25 @@ Completed additional coursework in History and Politics
 
 \section*{\textbf{Selected Projects}}
 
+\textbf{Tracing} (\href{https://github.com/tokio-rs/tracing}{github.com/tokio-rs/tracing})
+\begin{itemize}
+    \item Helped launch Tracing, a unified, high-performance instrumentation system for Rust that emits logs, metrics, and traces.
+    \item Built the primary logging/instrumentation interface, contributed to documentation and usage guides, and mentored several new contributors to the project. 
+    \item Successfully introduced Tracing into several tier-1 AWS services who are using Tracing without issue.
+\end{itemize}
+
+\textbf{Tower} (\href{https://github.com/tokio-rs/tower}{github.com/tower-rs/tower})
+\begin{itemize}
+    \item Contributed documentation and more ergonomic error handling to Tower, a library for unified client/server middleware.
+    \item Built an HTTP congestion control library that expands/shrinks depending on downstream service health.
+\end{itemize}
 
 \textbf{Rust Runtime for AWS Lambda} (\href{https://github.com/awslabs/aws-lambda-rust-runtime}{github.com/awslabs/aws-lambda-rust-runtime})
 \begin{itemize}
-    \item Launched and maintaining the Rust Runtime for AWS Lambda.
+    \item Launched and maintained the Rust Runtime for AWS Lambda.
 \end{itemize}
-
-\textbf{Tokio} (\href{https://github.com/tokio-rs/tokio}{github.com/tokio-rs/tokio})
-\begin{itemize}
-    \item Co-maintainer of Tokio, Rust's asynchronous runtime.
-    \item Helped launch Tracing, a unified, high-performance instrumentation system for Rust that emits logs, metrics, and traces.
-\end{itemize}
-
-\textbf{Honor's Thesis} (\href{https://github.com/davidbarsky/sirens}{github.com/davidbarsky/sirens})
-\begin{itemize}
-    \item Benchmarked job scheduling algorithms across various simulated workloads.
-\end{itemize}
-
 \section*{\textbf{Skills}}
-\textbf{Languages:} Rust, Go, Python, Swift, Java \\
-\textbf{Tooling:} AWS (DynamoDB, ECS, Lambda), Unix-like systems, Docker, Git, gRPC
+\textbf{Languages:} Rust, Java, Go, Kotlin, Python. \\
+\textbf{Tooling:} AWS (DynamoDB, ECS, Lambda), Linux, Docker, Git, gRPC.
 
 \end{document}
