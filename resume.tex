@@ -19,12 +19,10 @@
 \usepackage{xltxtra}
 % converts LaTeX specials (quotes, dashes etc.) to Unicode
 \defaultfontfeatures{Mapping=tex-text}
-\setromanfont [Ligatures={Common}]{Inter UI}
+\setromanfont [Ligatures={Common}]{Source Serif Pro}
 % Cool ampersand
-\newcommand{\amper}{{\fontspec[Scale=.80]{Inter UI}\selectfont\itshape\&}}
-\setmainfont[
-    BoldFont = * Semi Bold,
-]{Inter UI}
+\newcommand{\amper}{{\fontspec[Scale=.80]{Source Serif Pro}\selectfont\itshape\&}}
+\setmainfont{Source Serif Pro}
 \raggedright
 
 % MARGIN NOTES
@@ -85,13 +83,13 @@
 \textbf{Amazon, Alexa AI} \\
 \emph{Software Engineer}
 \begin{itemize}
-	\item Integrated internal test data generation system into the Alexa Skills Kit, a unified, self-service Alexa model building and testing platform.
+	\item Integrated internal test data generation system into a unified, self-service natural language model building and testing platform.
 	\item Enabled multiple Alexa verticals (e.g., Music, Shopping) to release features independently and concurrently, doubling daily release capacity.
 	\item Drove AWS to sponsor the Rust project's AWS bill for the next three years.
 	\item Reduced execution time of NLU model validation tooling from 45 minutes to 2 minutes.
 	\item Reduced execution time of a test-data generation system from 12 hours to 15 minutes.
 	\item Mentored three interns, who have all returned to Amazon as full-time SDEs.
-    \item Implemented Alexaʼs natural language model to be hardware-capability aware. This significantly reduced engineering effort needed to support new devices and cut the public Alexa serviceʼs memory usage by 30\%. 
+	\item Implemented Alexaʼs natural language model to be hardware-capability aware. This significantly reduced engineering effort needed to support new devices and cut the public Alexa serviceʼs memory usage by 30\%. 
 \end{itemize}
 
 \note{Summer 2016}
@@ -112,8 +110,8 @@ Completed additional coursework in History and Politics
 \textbf{Tracing} (\href{https://github.com/tokio-rs/tracing}{github.com/tokio-rs/tracing})
 \begin{itemize}
     \item Helped launch Tracing, a unified, high-performance instrumentation system for Rust that emits logs, metrics, and traces.
-    \item Built the primary logging/instrumentation interface, contributed to documentation and usage guides, and mentored several new contributors to the project. 
-    \item Successfully introduced Tracing into several tier-1 AWS services who are using Tracing without issue.
+    \item Designed and wrote a lock-free data store for storing high-cardinality instrumentation data. This store is now the basis of several third-party instrumentation exporters, such as OpenTelemetry, Prometheus, and Amazon's internal metrics format.
+    \item Successfully introduced Tracing into several key AWS services, whose total request volume exceeds two million requests per second.
 \end{itemize}
 
 \textbf{Tower} (\href{https://github.com/tokio-rs/tower}{github.com/tower-rs/tower})
@@ -124,7 +122,8 @@ Completed additional coursework in History and Politics
 
 \textbf{Rust Runtime for AWS Lambda} (\href{https://github.com/awslabs/aws-lambda-rust-runtime}{github.com/awslabs/aws-lambda-rust-runtime})
 \begin{itemize}
-    \item Launched and maintained the Rust Runtime for AWS Lambda.
+    \item Launched the Rust Runtime for AWS Lambda.
+    \item Converted project to be asynchronous async/await, enabling concurrent executions and easier in-memory testing of Lambda functions.
 \end{itemize}
 \section*{\textbf{Skills}}
 \textbf{Languages:} Rust, Java, Go, Kotlin, Python. \\
